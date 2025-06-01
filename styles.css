@@ -1,9 +1,16 @@
+:root{
+  --star-bg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='2' cy='2' r='1' fill='%231c2d60'/%3E%3C/svg%3E");
+}
+
+
 
 body{
   font-family: Arial, sans-serif;
   text-align:center;
-  background:#0c163d;
-  color:#fff;
+background:
+  var(--star-bg) repeat,
+  linear-gradient(#0c163d 0%, #243b7a 100%);
+
 }
 .deck{margin-top:20px;}
 .card{
@@ -30,6 +37,7 @@ body{
   width:100%;
   height:100%;
   border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
 }
 .card-front img,.card-back img{
   width:100%;
