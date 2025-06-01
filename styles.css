@@ -7,11 +7,10 @@
 body{
   font-family: Arial, sans-serif;
   text-align:center;
-background:
-  var(--star-bg) repeat,
-  linear-gradient(#0c163d 0%, #243b7a 100%);
-
+  background:#1b2c5e;   /* ← 亮一階 */
+  color:#fff;
 }
+
 .deck{margin-top:20px;}
 .card{
   width:150px;
@@ -37,7 +36,7 @@ background:
   width:100%;
   height:100%;
   border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+
 }
 .card-front img,.card-back img{
   width:100%;
