@@ -42,3 +42,11 @@ function drawCards(){
     setTimeout(()=>deckDiv.appendChild(cardDiv),i*300);
   });
 }
+
+function flipAll() {
+  // 抓所有還沒翻的 .card，全部加上 flipped
+  document.querySelectorAll('.card').forEach(card => {
+    card.classList.add('flipped');
+  });
+}
+
