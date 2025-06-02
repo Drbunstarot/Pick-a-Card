@@ -82,3 +82,50 @@ body{
     font-size:0.8rem;
   }
 }
+
+  /* —— 控制列排版 —— */
+.controls{
+  margin:20px auto 10px;
+  display:flex;
+  gap:12px;                   /* 元件之間留 12px */
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;             /* 行動版自動換行 */
+}
+
+/* 調大字、增加按鈕手感 */
+.controls label{
+  font-size:1.1rem;
+  margin-right:4px;
+}
+
+.controls select,
+.controls button{
+  font-size:1.1rem;           /* 整體字體增大 */
+  padding:6px 14px;
+  border-radius:6px;
+  border:none;
+}
+
+.controls button{
+  background:#ffffff10;       /* 透明白邊界 */
+  color:#fff;
+  border:1px solid #fff;
+  cursor:pointer;
+  transition:background .2s;
+}
+.controls button:hover{
+  background:#ffffff30;
+}
+
+  @media (max-width:600px){
+  .controls label,
+  .controls select,
+  .controls button{
+    font-size:1.25rem;
+  }
+  .controls button{
+    padding:8px 16px;
+  }
+}
+
