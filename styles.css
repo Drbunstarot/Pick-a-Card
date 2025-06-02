@@ -43,7 +43,7 @@ body{
   transform:rotateY(180deg);
 }
 
-.card-back.reversed img,
-.card-front.reversed img {
+/* 讓正位保持原樣，逆位的圖片整張倒轉 180° */
+.card-front img.reversed,
+.card-back  img.reversed {
   transform: rotate(180deg);
-}
