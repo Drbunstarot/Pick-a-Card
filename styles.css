@@ -42,3 +42,8 @@ body{
 .card-back{
   transform:rotateY(180deg);
 }
+
+.card-back.reversed img,
+.card-front.reversed img {
+  transform: rotate(180deg);
+}
