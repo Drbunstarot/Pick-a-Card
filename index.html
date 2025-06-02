@@ -7,13 +7,17 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1> ✨ Dr.Bun 塔羅抽牌程式 </h1>
-<label for="cardCount"> 選取抽取張數 </label>
-<select id="cardCount">
-</select>
-<button onclick="drawCards()">抽牌</button>
-<button onclick="flipAll()">一次翻牌</button>
+<h1>✨ Dr.Bun 塔羅抽牌程式</h1>
+
+<div class="controls">
+  <label for="cardCount">選取抽取張數</label>
+  <select id="cardCount"></select>
+  <button onclick="drawCards()">抽牌</button>
+  <button onclick="flipAll()">一次翻牌</button>
+</div>
+
 <div id="deck" class="deck"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
