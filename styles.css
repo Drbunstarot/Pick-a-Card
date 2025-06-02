@@ -85,10 +85,10 @@ body{
   flex-wrap:wrap;
 }
 
-/* 讓前兩個元素（label + select）自動換到獨立一列 */
 .controls label,
 .controls select{
-  flex: 1 1 100%;    /* 佔滿 100% 寬度 → 自成一行 */
+  flex:1 1 50%;
+  text-align:right;      /* label 右對齊更好看（可選） */
 }
 
 
