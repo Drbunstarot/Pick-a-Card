@@ -1,12 +1,13 @@
-
 body{
   font-family: Arial, sans-serif;
   text-align:center;
-  background:#142a60;   /* ← 乾淨深藍，想再亮一點就 #142a60 */
+  background:#142a60;  /* 深藍背景 */
   color:#fff;
 }
 
+/* 牌區塊 ─────────────── */
 .deck{margin-top:20px;}
+
 .card{
   width:150px;
   height:240px;
@@ -25,16 +26,18 @@ body{
 .card.flipped .card-inner{
   transform:rotateY(180deg);
 }
-.card-front,.card-back{
+
+.card-front,
+.card-back{
   backface-visibility:hidden;
   position:absolute;
   width:100%;
   height:100%;
   border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,0.4);
-
 }
-.card-front img,.card-back img{
+.card-front img,
+.card-back img{
   width:100%;
   height:100%;
   border-radius:12px;
@@ -43,57 +46,45 @@ body{
   transform:rotateY(180deg);
 }
 
-/* 讓正位保持原樣，逆位的圖片整張倒轉 180° */
+/* 逆位翻轉 */
 .card-front img.reversed,
-.card-back  img.reversed {
-  transform: rotate(180deg);
+.card-back  img.reversed{
+  transform:rotate(180deg);
+}         /* ←←← ★ 這個大括號是原本缺少的！ */
 
-/* —— 手機寬度 600px 以下 —— */
+/* ── 手機寬度 600px 以下 ─────────────────── */
 @media (max-width:600px){
-  h1{
-    font-size:1.4rem;          /* 標題縮小一點點 */
-  }
-  label, button{
-    font-size:0.9rem;          /* 文字略大，方便點擊 */
-  }
+  h1{ font-size:1.4rem; }
 
-  /* 卡片改為較小尺寸＋自動換行 */
+  label, button{ font-size:0.9rem; }
+
   .card{
     width:110px;
     height:175px;
     margin:6px;
   }
-
-  /* 卡片中的字放大，避免太小 */
-  .card-back img.reversed,
-  .card-front img.reversed{
-    transform:rotate(180deg);
-  }
 }
 
-/* —— 超小螢幕 380px 以下 —— */
+/* ── 超小螢幕 380px 以下 ─────────────────── */
 @media (max-width:380px){
   .card{
     width:90px;
     height:140px;
     margin:4px;
   }
-  label, button{
-    font-size:0.8rem;
-  }
+  label, button{ font-size:0.8rem; }
 }
 
-  /* —— 控制列排版 —— */
+/* 控制列（下拉＋按鈕） ─────────────── */
 .controls{
   margin:20px auto 10px;
   display:flex;
-  gap:12px;                   /* 元件之間留 12px */
+  gap:12px;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;             /* 行動版自動換行 */
+  flex-wrap:wrap;
 }
 
-/* 調大字、增加按鈕手感 */
 .controls label{
   font-size:1.1rem;
   margin-right:4px;
@@ -101,14 +92,14 @@ body{
 
 .controls select,
 .controls button{
-  font-size:1.1rem;           /* 整體字體增大 */
+  font-size:1.1rem;
   padding:6px 14px;
   border-radius:6px;
   border:none;
 }
 
 .controls button{
-  background:#ffffff10;       /* 透明白邊界 */
+  background:#ffffff10;
   color:#fff;
   border:1px solid #fff;
   cursor:pointer;
@@ -118,7 +109,8 @@ body{
   background:#ffffff30;
 }
 
-  @media (max-width:600px){
+/* 手機下再放大控制列字體 */
+@media (max-width:600px){
   .controls label,
   .controls select,
   .controls button{
@@ -128,4 +120,3 @@ body{
     padding:8px 16px;
   }
 }
-
