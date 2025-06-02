@@ -47,3 +47,38 @@ body{
 .card-front img.reversed,
 .card-back  img.reversed {
   transform: rotate(180deg);
+
+/* —— 手機寬度 600px 以下 —— */
+@media (max-width:600px){
+  h1{
+    font-size:1.4rem;          /* 標題縮小一點點 */
+  }
+  label, button{
+    font-size:0.9rem;          /* 文字略大，方便點擊 */
+  }
+
+  /* 卡片改為較小尺寸＋自動換行 */
+  .card{
+    width:110px;
+    height:175px;
+    margin:6px;
+  }
+
+  /* 卡片中的字放大，避免太小 */
+  .card-back img.reversed,
+  .card-front img.reversed{
+    transform:rotate(180deg);
+  }
+}
+
+/* —— 超小螢幕 380px 以下 —— */
+@media (max-width:380px){
+  .card{
+    width:90px;
+    height:140px;
+    margin:4px;
+  }
+  label, button{
+    font-size:0.8rem;
+  }
+}
