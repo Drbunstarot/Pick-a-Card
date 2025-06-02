@@ -85,10 +85,10 @@ body{
   flex-wrap:wrap;
 }
 
-.controls label,
-.controls select{
-  flex:1 1 50%;
-  text-align:right;      /* label 右對齊更好看（可選） */
+/* 讓 .break 佔滿一整行，迫使後面的按鈕換到下一列 */
+.controls .break{
+  flex-basis:100%;
+  height:0;          /* 不佔高度，只做“斷行” */
 }
 
 
